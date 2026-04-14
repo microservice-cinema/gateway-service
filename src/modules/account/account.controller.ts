@@ -1,5 +1,5 @@
 import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common'
-import {ApiBearerAuth, ApiOperation} from '@nestjs/swagger'
+import { ApiBearerAuth, ApiOperation } from '@nestjs/swagger'
 
 import { CurrentUser, Protected } from '../../shared'
 
@@ -19,7 +19,7 @@ export class AccountController {
 		summary: 'Init email change',
 		description: 'Sends confirmation code to a new email address.'
 	})
-    @ApiBearerAuth()
+	@ApiBearerAuth()
 	@Protected()
 	@Post('email/init')
 	@HttpCode(HttpStatus.OK)
@@ -35,9 +35,10 @@ export class AccountController {
 
 	@ApiOperation({
 		summary: 'Confirm email change',
-		description: 'Verifies confirmations code and updates user email address.'
+		description:
+			'Verifies confirmations code and updates user email address.'
 	})
-    @ApiBearerAuth()
+	@ApiBearerAuth()
 	@Protected()
 	@Post('email/confirm')
 	@HttpCode(HttpStatus.OK)
@@ -51,39 +52,40 @@ export class AccountController {
 		})
 	}
 
-    @ApiOperation({
-        summary: 'Init phone change',
-        description: 'Sends confirmation code to a new phone address.'
-    })
-    @ApiBearerAuth()
-    @Protected()
-    @Post('phone/init')
-    @HttpCode(HttpStatus.OK)
-    public async initPhoneChange(
-        @Body() dto: InitPhoneChangeRequest,
-        @CurrentUser() userId: string
-    ) {
-        return this.client.initPhoneChange({
-            ...dto,
-            userId
-        })
-    }
+	@ApiOperation({
+		summary: 'Init phone change',
+		description: 'Sends confirmation code to a new phone address.'
+	})
+	@ApiBearerAuth()
+	@Protected()
+	@Post('phone/init')
+	@HttpCode(HttpStatus.OK)
+	public async initPhoneChange(
+		@Body() dto: InitPhoneChangeRequest,
+		@CurrentUser() userId: string
+	) {
+		return this.client.initPhoneChange({
+			...dto,
+			userId
+		})
+	}
 
-    @ApiOperation({
-        summary: 'Confirm phone change',
-        description: 'Verifies confirmations code and updates user phone number.'
-    })
-    @ApiBearerAuth()
-    @Protected()
-    @Post('phone/confirm')
-    @HttpCode(HttpStatus.OK)
-    public async confirmPhoneChange(
-        @Body() dto: ConfirmPhoneChangeRequest,
-        @CurrentUser() userId: string
-    ) {
-        return this.client.confirmPhoneChange({
-            ...dto,
-            userId
-        })
-    }
+	@ApiOperation({
+		summary: 'Confirm phone change',
+		description:
+			'Verifies confirmations code and updates user phone number.'
+	})
+	@ApiBearerAuth()
+	@Protected()
+	@Post('phone/confirm')
+	@HttpCode(HttpStatus.OK)
+	public async confirmPhoneChange(
+		@Body() dto: ConfirmPhoneChangeRequest,
+		@CurrentUser() userId: string
+	) {
+		return this.client.confirmPhoneChange({
+			...dto,
+			userId
+		})
+	}
 }
