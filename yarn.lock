@@ -334,9 +334,9 @@
   integrity sha512-DDaRehssg1aNrH4+2hnj1B7vnUGEjU6OIlyRdkMd0aUdIUvKXrJfXsy8LVtXAy7DRvYVluWbMspsRhz2lcW0mQ==
 
 "@bufbuild/protobuf@^2.0.0", "@bufbuild/protobuf@^2.10.2":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@bufbuild/protobuf/-/protobuf-2.11.0.tgz#3ec3985c9074b23aea337957225fe15a0e845f8e"
-  integrity sha512-sBXGT13cpmPR5BMgHE6UEEfEaShh5Ror6rfN3yEK5si7QVrtZg8LEPQb0VVhiLRUslD2yLnXtnRzG035J/mZXQ==
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@bufbuild/protobuf/-/protobuf-2.12.0.tgz#53225636a8fcebb2bd94998ad9d42f99f96add4d"
+  integrity sha512-B/XlCaFIP8LOwzo+bz5uFzATYokcwCKQcghqnlfwSmM5eX/qTkvDBnDPs+gXtX/RyjxJ4DRikECcPJbyALA8FA==
 
 "@colors/colors@1.5.0":
   version "1.5.0"
@@ -894,9 +894,9 @@
   integrity sha512-xNMgM+JsiTPvRFr0nrs+CQMiuwiewYHR+XYr3PIHG2LdzxMw/uPkZWuVBedahBN891IoGP25THQMJOo+NZyyRw==
 
 "@microservice-cinema/contracts@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@microservice-cinema/contracts/-/contracts-1.0.8.tgz#ac2432141e848c0210864573b25feab347dc095f"
-  integrity sha512-6RGIoqCMEY22acfxqjbLMrfT0kYTHiiORdB2roWnb8qSse8Tjvinh8e3uG8VUuTBIQS3xH8gZgAmtpJ8uDhf3Q==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@microservice-cinema/contracts/-/contracts-1.1.0.tgz#f5b3031707bcda20319ab5579420b69d493d4f1a"
+  integrity sha512-wKW9o3eOoOqkoqW+wSTuMD8Er6w8xX2CgfMlEy3cZxyiy3CTChLikZKIKqwIAIJsu4h9frpFZzwuS8fT2XWFlA==
   dependencies:
     "@nestjs/microservices" "^11.1.13"
     rxjs "^7.8.2"
