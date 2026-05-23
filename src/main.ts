@@ -6,7 +6,7 @@ import * as cookieParser from 'cookie-parser'
 
 import { AppModule } from './core/app.module'
 import { getCorsConfig, getValidationPipeConfig } from './core/config'
-import { GrpcExceptionFilter } from './shared/filters'
+import { GrpcExceptionFilter } from './shared'
 
 async function bootstrap() {
 	const app = await NestFactory.create(AppModule)
