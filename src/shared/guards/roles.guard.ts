@@ -7,7 +7,6 @@ import {
 	NotFoundException
 } from '@nestjs/common'
 import { Reflector } from '@nestjs/core'
-import { lastValueFrom } from 'rxjs'
 
 import { AccountClientGrpc } from '../../modules/account/account.grpc'
 import { ROLES_KEY } from '../decorators'
@@ -33,9 +32,9 @@ export class RolesGuard implements CanActivate {
 
 		if (!user) throw new ForbiddenException('User context missing')
 
-		const account = await lastValueFrom(
-			this.accountClient.getAccount({ id: user.id })
-		)
+		const account = await this.accountClient.call('getAccount', {
+			id: user.id
+		})
 
 		if (!account) throw new NotFoundException('Account not found')
 
