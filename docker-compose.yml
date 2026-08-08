@@ -5,6 +5,7 @@ name: microservice-cinema
 services:
   gateway-service:
     container_name: gateway-service
+    image: microservice-cinema/gateway-service:dev
     build:
       context: .
       dockerfile: Dockerfile
