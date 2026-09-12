@@ -1,5 +1,5 @@
 import { InjectGrpcClient } from '@microservice-cinema/common'
-import type { AccountServiceClient } from '@microservice-cinema/contracts/gen/account'
+import type { AccountServiceClient } from '@microservice-cinema/contracts/gen/ts/account'
 import { Injectable } from '@nestjs/common'
 import type { ClientGrpc } from '@nestjs/microservices'
 

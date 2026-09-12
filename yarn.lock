@@ -905,20 +905,20 @@
   resolved "https://registry.yarnpkg.com/@lukeed/csprng/-/csprng-1.1.0.tgz#1e3e4bd05c1cc7a0b2ddbd8a03f39f6e4b5e6cfe"
   integrity sha512-Z7C/xXCiGWsg0KuKsHTKJxbWhpI3Vs5GwLfOean7MGyVFGqdRgBbAjOCh6u4bbjPc/8MJ2pZmK/0DLdCbivLDA==
 
-"@microservice-cinema/common@^1.1.3":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@microservice-cinema/common/-/common-1.1.3.tgz#68838912057b3f3c4a156169dc8104083c6bca89"
-  integrity sha512-xyLZiTChFpbchfqbM4mz83CcAF8Sof+S/YRCdL6vgqR0m3y78VdMEmGFjhkzkYN3dof2f9pVLJxPT0oodlhSuw==
+"@microservice-cinema/common@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@microservice-cinema/common/-/common-1.1.4.tgz#57ec635c336f4f23c418707deb0929c2c415d7ca"
+  integrity sha512-wenzycEBFf1lin2HRK0Up2p/gi7OXibtx6YoILSi2JMq4meJp1fR/3rreS17qSiuiA9TzuVARLPNlVE62UrjLA==
   dependencies:
-    "@microservice-cinema/contracts" "^1.1.4"
+    "@microservice-cinema/contracts" "^1.2.0"
     "@nestjs/common" "^11.1.23"
     "@nestjs/config" "^4.0.4"
     "@nestjs/microservices" "^11.1.23"
 
-"@microservice-cinema/contracts@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@microservice-cinema/contracts/-/contracts-1.1.4.tgz#6073a6f2828978a7634747ae1da965c0e1946fa3"
-  integrity sha512-AbqGDQ3lSOnWXE/gldNSZjRi7LOnhYpXf1wIpBxOTrkTiJ5UYsTRaG3Dc1recCGlc+cneOKululYNmPowDhciw==
+"@microservice-cinema/contracts@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@microservice-cinema/contracts/-/contracts-1.2.0.tgz#5288f7643e9832f485ccc5d607e76151f31faba9"
+  integrity sha512-RRblM7UrGzmb6YQAUCGaX8yzWb8Vi48c/o2RRNKzuVUGJO8Jx4ByG7af5hmQUPZrWUkzeWoTO/DNrCf1RAJrZg==
   dependencies:
     "@nestjs/microservices" "^11.1.13"
     rxjs "^7.8.2"
@@ -2335,7 +2335,7 @@
     "@types/range-parser" "*"
     "@types/send" "*"
 
-"@types/express@^5.0.0":
+"@types/express@*", "@types/express@^5.0.0":
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/@types/express/-/express-5.0.6.tgz#2d724b2c990dcb8c8444063f3580a903f6d500cc"
   integrity sha512-sKYVuV7Sv9fbPIt/442koC7+IIwK5olP1KWeD88e/idgoJqDm3JV/YUiPwkoKK92ylff2MGxSz1CSjsXelx0YA==
@@ -2404,6 +2404,13 @@
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/@types/methods/-/methods-1.1.4.tgz#d3b7ac30ac47c91054ea951ce9eed07b1051e547"
   integrity sha512-ymXWVrDiCxTBE3+RIrrP533E70eA+9qu7zdWoHuOmGujkYtzf4HQF96b8nwHLqhuf4ykX61IGRIB38CC6/sImQ==
+
+"@types/multer@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@types/multer/-/multer-2.2.0.tgz#f987c770cbe309d1b5e60c251851d6550f121f61"
+  integrity sha512-3U1troeqGV8Ntp7Q3klwf4zr23VEoqYVocYXaswm9+8z3O9UHDYAqLxjJ/h550iRADTjKdOdhhasXw6gD6kYtg==
+  dependencies:
+    "@types/express" "*"
 
 "@types/mysql@2.15.27":
   version "2.15.27"
@@ -5555,6 +5562,16 @@ multer@2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/multer/-/multer-2.1.1.tgz#122d819244fbdfee1efddd9147426691014385b7"
   integrity sha512-mo+QTzKlx8R7E5ylSXxWzGoXoZbOsRMpyitcht8By2KHvMbf3tjwosZ/Mu/XYU6UuJ3VZnODIrak5ZrPiPyB6A==
+  dependencies:
+    append-field "^1.0.0"
+    busboy "^1.6.0"
+    concat-stream "^2.0.0"
+    type-is "^1.6.18"
+
+multer@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/multer/-/multer-2.2.0.tgz#f005268ca816324ba7335e3b48166896a3fa5d79"
+  integrity sha512-6rdyFg2kLrMh9Jee7/BMPuV9lEAd7lLW2YUpF9/YxR7njyoUwwQ0ZPh3TaIY50Sw6vlyD2HW3wGOkTS4P79xrQ==
   dependencies:
     append-field "^1.0.0"
     busboy "^1.6.0"
