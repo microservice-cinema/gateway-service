@@ -1,4 +1,4 @@
-import type { Role } from '@microservice-cinema/contracts/gen/account'
+import type { Role } from '@microservice-cinema/contracts/gen/ts/account'
 import {
 	CanActivate,
 	ExecutionContext,
