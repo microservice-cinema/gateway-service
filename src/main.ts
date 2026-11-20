@@ -2,12 +2,13 @@ import { Logger, ValidationPipe } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { NestFactory } from '@nestjs/core'
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
-import * as cookieParser from 'cookie-parser'
 
 import { AppModule } from './core/app.module'
 import { getCorsConfig, getValidationPipeConfig } from './core/config'
 import './observability/tracing'
 import { GrpcExceptionFilter } from './shared'
+
+import cookieParser = require('cookie-parser')
 
 async function bootstrap() {
 	const app = await NestFactory.create(AppModule)
@@ -41,7 +42,7 @@ async function bootstrap() {
 
 	await app.listen(port)
 
-	logger.log(`Gateway started: ${host}`)
+	logger.log(`Gateway service started: ${host}`)
 	logger.log(`Swagger: ${host}/docs`)
 }
 

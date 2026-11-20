@@ -7,5 +7,5 @@ export class InitEmailChangeRequest {
 	})
 	@IsString()
 	@IsEmail()
-	public email: string
+	public email!: string
 }

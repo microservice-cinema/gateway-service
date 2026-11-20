@@ -20,13 +20,12 @@ import {
 	ApiOkResponse,
 	ApiOperation
 } from '@nestjs/swagger'
-import { randomBytes } from 'node:crypto'
+import { randomBytes } from 'crypto'
+import { CurrentUser, Protected } from 'src/shared/decorators'
 
-import { CurrentUser, Protected } from '../../shared'
 import { MediaClientGrpc } from '../media/media.grpc'
 
-import { GetMeResponse } from './dto'
-import { PatchUserRequest } from './dto/requests'
+import { GetMeResponse, PatchUserRequest } from './dto'
 import { UsersClientGrpc } from './users.grpc'
 
 @Controller('users')

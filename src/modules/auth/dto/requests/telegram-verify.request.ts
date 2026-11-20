@@ -7,5 +7,5 @@ export class TelegramVerifyRequest {
 	})
 	@IsString()
 	@IsNotEmpty()
-	public tgAuthResult: string
+	public tgAuthResult!: string
 }

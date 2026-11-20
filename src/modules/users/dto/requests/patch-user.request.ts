@@ -7,5 +7,5 @@ export class PatchUserRequest {
 	})
 	@IsString()
 	@IsNotEmpty()
-	public name: string
+	public name!: string
 }
