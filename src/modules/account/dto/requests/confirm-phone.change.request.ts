@@ -13,7 +13,7 @@ export class ConfirmPhoneChangeRequest {
 	})
 	@IsString()
 	@Matches(/^\+?\d{10,15}$/)
-	public phone: string
+	public phone!: string
 
 	@ApiProperty({
 		example: '123456'
@@ -21,5 +21,5 @@ export class ConfirmPhoneChangeRequest {
 	@IsNotEmpty()
 	@IsNumberString()
 	@Length(6, 6)
-	public code: string
+	public code!: string
 }

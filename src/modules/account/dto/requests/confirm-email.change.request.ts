@@ -13,7 +13,7 @@ export class ConfirmEmailChangeRequest {
 	})
 	@IsString()
 	@IsEmail()
-	public email: string
+	public email!: string
 
 	@ApiProperty({
 		example: '123456'
@@ -21,5 +21,5 @@ export class ConfirmEmailChangeRequest {
 	@IsNotEmpty()
 	@IsNumberString()
 	@Length(6, 6)
-	public code: string
+	public code!: string
 }

@@ -7,5 +7,5 @@ export class InitPhoneChangeRequest {
 	})
 	@IsString()
 	@Matches(/^\+?\d{10,15}$/)
-	public phone: string
+	public phone!: string
 }

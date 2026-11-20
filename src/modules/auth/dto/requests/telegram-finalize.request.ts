@@ -7,5 +7,5 @@ export class TelegramFinalizeRequest {
 	})
 	@IsString()
 	@IsNotEmpty()
-	public sessionId: string
+	public sessionId!: string
 }

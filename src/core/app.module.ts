@@ -4,6 +4,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config'
 
 import { AccountModule } from '../modules/account/account.module'
 import { AuthModule } from '../modules/auth/auth.module'
+import { CategoryModule } from '../modules/category/category.module'
+import { MovieModule } from '../modules/movie/movie.module'
 import { UsersModule } from '../modules/users/users.module'
 import { ObservabilityModule } from '../observability/observability.module'
 
@@ -28,7 +30,9 @@ import { getPassportConfig } from './config'
 		AuthModule,
 		ObservabilityModule,
 		AccountModule,
-		UsersModule
+		UsersModule,
+		MovieModule,
+		CategoryModule
 	],
 	controllers: [AppController],
 	providers: [AppService]

@@ -13,7 +13,7 @@ import {
 
 @Controller('/account')
 export class AccountController {
-	public constructor(private readonly client: AccountClientGrpc) {}
+	public constructor(private readonly account: AccountClientGrpc) {}
 
 	@ApiOperation({
 		summary: 'Init email change',
@@ -27,7 +27,7 @@ export class AccountController {
 		@Body() dto: InitEmailChangeRequest,
 		@CurrentUser() userId: string
 	) {
-		return this.client.call('initEmailChange', {
+		return this.account.call('initEmailChange', {
 			...dto,
 			userId
 		})
@@ -46,7 +46,7 @@ export class AccountController {
 		@Body() dto: ConfirmEmailChangeRequest,
 		@CurrentUser() userId: string
 	) {
-		return this.client.call('confirmEmailChange', {
+		return this.account.call('confirmEmailChange', {
 			...dto,
 			userId
 		})
@@ -64,7 +64,7 @@ export class AccountController {
 		@Body() dto: InitPhoneChangeRequest,
 		@CurrentUser() userId: string
 	) {
-		return this.client.call('initPhoneChange', {
+		return this.account.call('initPhoneChange', {
 			...dto,
 			userId
 		})
@@ -83,7 +83,7 @@ export class AccountController {
 		@Body() dto: ConfirmPhoneChangeRequest,
 		@CurrentUser() userId: string
 	) {
-		return this.client.call('confirmPhoneChange', {
+		return this.account.call('confirmPhoneChange', {
 			...dto,
 			userId
 		})
